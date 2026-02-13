@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Founders</title>
+    <title>Founder's</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -13,29 +13,23 @@
 
         body {
             margin: 0;
-            padding: 20px;
+            padding: 0;
             font-family: 'Manrope', sans-serif;
             background: linear-gradient(180deg, #e8f0fe 0%, #f5f8ff 60%, #ffffff 100%);
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
             min-height: 100vh;
         }
 
-        .container {
-            width: 100%;
-            max-width: 420px;
-            display: flex;
-            flex-direction: column;
-            gap: 22px;
-        }
-
-        /* Header row */
+        /* Header pinned to top */
         .page-header {
             display: flex;
             align-items: center;
             position: relative;
-            margin-bottom: 10px;
+            padding: 24px 20px;
+            width: 100%;
+            max-width: 420px;
+            margin: 0 auto;
         }
 
         /* Back button */
@@ -69,6 +63,23 @@
             font-size: 26px;
             font-weight: 600;
             color: #004038;
+        }
+
+        /* Buttons area centered in remaining space */
+        .buttons-area {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .buttons-container {
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
         }
 
         .profile-btn {
@@ -116,31 +127,33 @@
 
 <body>
 
-    <div class="container">
+    <!-- Header at top -->
+    <div class="page-header">
+        <a href="index.html" class="back-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+            Back
+        </a>
+        <div class="page-title">Founders</div>
+    </div>
 
-        <div class="page-header">
-            <a href="index.html" class="back-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                </svg>
-                Back
+    <!-- Buttons centered in remaining space -->
+    <div class="buttons-area">
+        <div class="buttons-container">
+            <!-- Khushi Tiwari -->
+            <a href="https://www.linkedin.com/in/khushi-tiwari-9a0a71216" target="_blank" class="profile-btn">
+                <img src="LinkedIn-logo.png" alt="" class="btn-icon no-invert">
+                <span class="btn-text">Khushi Tiwari</span>
             </a>
-            <div class="page-title">Founders</div>
+
+            <!-- Amit Roy -->
+            <a href="https://www.linkedin.com/in/amit-roy-2b54081b2" target="_blank" class="profile-btn">
+                <img src="LinkedIn-logo.png" alt="" class="btn-icon no-invert">
+                <span class="btn-text">Amit Roy</span>
+            </a>
         </div>
-
-        <!-- Khushi Tiwari -->
-        <a href="https://www.linkedin.com/in/khushi-tiwari-9a0a71216" target="_blank" class="profile-btn">
-            <img src="LinkedIn-logo.png" alt="" class="btn-icon no-invert">
-            <span class="btn-text">Khushi Tiwari</span>
-        </a>
-
-        <!-- Amit Roy -->
-        <a href="https://www.linkedin.com/in/amit-roy-2b54081b2" target="_blank" class="profile-btn">
-            <img src="LinkedIn-logo.png" alt="" class="btn-icon no-invert">
-            <span class="btn-text">Amit Roy</span>
-        </a>
-
     </div>
 
 </body>
